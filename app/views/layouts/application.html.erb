@@ -7,10 +7,40 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div class="container">
+      <nav class="navbar navbar-default">
+
+
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <h1>Appchance</h1>
+            <p class="navbar-brand"><%= notice %></p>
+            <p class="navbar-brand"><%= alert %></p>
+            <div class="">
+            </div></div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><%if user_signed_in? %></li>
+          <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
+          <li><%= link_to "Hello " + current_user.email, edit_user_registration_path%></li>
+          <li><%else%></li>
+          <li><%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path %></li>
+
+          <li><%end%></li>
+
+        </ul>
+          <%= yield %>
+        </div>
+      </nav>
+    </div>
   </body>
+
 </html>
