@@ -1,0 +1,10 @@
+<h1>Appchance</h1>
+
+<%if user_signed_in? %>
+<%= link_to "Wyloguj", destroy_user_session_path, :method => :delete %>
+<%= link_to "Witaj " + current_user.email, edit_user_registration_path%>
+<%else%>
+<%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path %>
+
+
+<%end%>
