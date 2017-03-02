@@ -1,0 +1,2 @@
+module ConfrenzHelper
+end
