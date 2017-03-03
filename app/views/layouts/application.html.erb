@@ -16,35 +16,33 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
   <body>
-    <div class="container">
-      <nav class="navbar navbar-default">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
 
-
-        <div class="container-fluid">
           <div class="navbar-header">
-            <div class="nav navbar-nav">
-              <li><%= link_to "Appchance", root_path%></li>
-            </div>
-
-            <p class="navbar-brand"><%= notice %></p>
-            <p class="navbar-brand"><%= alert %></p>
-
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Appchance</a>
           </div>
-        <ul class="nav navbar-nav navbar-right">
-          <li><%if user_signed_in? %></li>
-          <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
-          <li><%= link_to "Hello " + current_user.email, edit_user_registration_path%></li>
-          <li><%= link_to "Home Page", menu_index_path%></li>
-          <li><%else%></li>
-          <li><%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path %></li>
-
-          <li><%end%></li>
-
-        </ul>
-        </div>
-      </nav>
-    </div>
-    <%= yield %>
+          <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li><%= link_to "Home", menu_index_path%></li>
+              <li><%if user_signed_in? %></li>
+              <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
+              <li class="active"><%= link_to "Hello " + current_user.email, edit_user_registration_path%></li>
+              <li><%else%></li>
+              <li><%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path %></li>
+              <li><%end%></li>
+            </ul>
+          </div>
+            <!--/.nav-collapse -->
+        </nav>
+      <div class="container">
+        <%= yield %>
+      </div>
   </body>
 
 </html>

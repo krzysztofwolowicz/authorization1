@@ -1,0 +1,37 @@
+
+  <h5> <%= link_to(" << Powrót do listy", confrenzs_path, :class => 'back-link') %> </h5>
+  <div class="table">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Tytuł</th>
+          <th>Opis konferencji</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= @confrenz.start %></td>
+          <td><%= @confrenz.titile %></td>
+          <td><%= @confrenz.content%></td>
+        </tr>
+
+      </tbody>
+    </table>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Godzina Bloku</th>
+          <th>Temat bloku</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= @confrenz.start %></td>
+          <td><%= @confrenz.titile %></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>

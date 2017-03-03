@@ -31,6 +31,7 @@ gem "omniauth-google-oauth2"
 gem 'devise', '~> 4.2'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'dotenv-rails', '~> 2.2'
+gem 'cancancan'
 
 
 # Use Redis adapter to run Action Cable in production

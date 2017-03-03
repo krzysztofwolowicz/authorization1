@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :confrenzs
   # Include default devise modules. Others available are:
   validates :email, format: { with: /\A[\w+\-.]+@appchance+(\.[a-z]+)*\.[a-z]+\z/i,
       message: "is not appchance" }
