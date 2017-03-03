@@ -1,0 +1,11 @@
+<%=form_for([@confrenz,@confrenz.subjects.build]) do |f| %>
+  <%= f.label :Temat%>
+  <%= f.text_area :name%>
+
+  <%= f.label :Godzina %>
+  <%= f.text_field :hour %>
+
+  <%= f.submit("Potwierdź") %>
+
+
+<%end%>

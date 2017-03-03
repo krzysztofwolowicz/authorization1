@@ -19,7 +19,7 @@ class ConfrenzsController < ApplicationController
 
     if @confrenz.save
       flash[:notice] = "Post został utworzony."
-      redirect_to confrenzs_path, :notice => "Konferencja została dodana"
+      redirect_to confrenz_path(@confrenz), :notice => "Konferencja została dodana"
     else
     render('new')
     end

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  hour: 2017-03-03 11:08:07
+  confrenz: one
+
+two:
+  name: MyString
+  hour: 2017-03-03 11:08:07
+  confrenz: two

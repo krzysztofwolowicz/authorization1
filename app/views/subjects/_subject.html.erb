@@ -1,0 +1,16 @@
+<thead>
+  <tr>
+    <th>Godzina Bloku</th>
+    <th>Temat bloku</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><%= subject.name %></td>
+    <td><%= subject.hour %></td>
+
+  </tr>
+
+</tbody>
+</table>
+<p> <%= link_to 'Usuń',[subject.confrenz, subject], method: :delete, data: {confirm: 'Are you sure? '} %> </p>

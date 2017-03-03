@@ -15,23 +15,11 @@
           <td><%= @confrenz.titile %></td>
           <td><%= @confrenz.content%></td>
         </tr>
-
       </tbody>
     </table>
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Godzina Bloku</th>
-          <th>Temat bloku</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><%= @confrenz.start %></td>
-          <td><%= @confrenz.titile %></td>
-        </tr>
+        <%= render @confrenz.subjects %>
+        <h3> Dodaj temat </h3>
+        <%= render 'subjects/form'%>
 
-      </tbody>
-    </table>
   </div>
 </div>

@@ -36,11 +36,14 @@
               <li><%else%></li>
               <li><%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path %></li>
               <li><%end%></li>
+              <li class="notice"><%= notice %></li>
+              <li class="alert"><%= alert %></li>
             </ul>
           </div>
             <!--/.nav-collapse -->
         </nav>
       <div class="container">
+
         <%= yield %>
       </div>
   </body>
