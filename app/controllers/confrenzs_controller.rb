@@ -3,6 +3,12 @@ class ConfrenzsController < ApplicationController
 
   def index
     @confrenzs = Confrenz.all
+    @confrenzs = Confrenz.all
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render xml: @confrenzs}
+      format.json { render json: @confrenzs}
+    end
   end
 
   def show
