@@ -1,0 +1,23 @@
+
+  <div class="subjects index">
+    <h1>Confrenz</h1>
+
+    <h5><%=link_to("Dodaj nową konferencję", new_company_path, :class => 'action new') %><h5>
+
+    <table class='listing' summary="Subject list">
+      <tr class="header">
+        <th>Tytuł konferencji</th>
+      </tr>
+      <% @companies.each do |company| %>
+      <tr>
+        <td><%= company.title %> </td>
+
+        <td class="actions">
+          <%= link_to("Pokaż", company_path(company), :class => 'action show') %>
+          <%= link_to("Edytuj", edit_company_path(company), :class => 'action edit') %>
+          <%= link_to("Usuń", company, method: :delete, data: { confirm: 'Are you sure?' }) %>
+        </td>
+      </tr>
+      <%end%>
+    </table>
+  </div>

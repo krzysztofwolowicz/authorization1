@@ -1,0 +1,21 @@
+<div class="subjects index">
+  <h2>Konferencja<h2>
+
+
+  <table class='listing' summary="Subject list">
+    <tr class="header">
+      <th>Tytuł konferencji</th>
+
+    </tr>
+
+    <tr>
+      <td><%= @companies.title %> </td>
+        <% @companies.schedules.each do |schedule| %>
+          <%= schedule.title %>
+        <% end %>
+
+
+    </tr>
+
+  </table>
+</div>

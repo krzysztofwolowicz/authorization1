@@ -1,0 +1,14 @@
+
+  <div>
+    <p><strong>Schedules:</strong></p>
+
+    <div id="schedules">
+      <%= f.fields_for :schedules do |schedul| %>
+        <%= render 'schedule_fields', f: schedul %>
+      <% end %>
+
+      <div class="links">
+        <%= link_to_add_association 'add scheduls', f, :schedules %>
+      </div>
+    </div>
+  </div>

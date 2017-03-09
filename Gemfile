@@ -32,7 +32,8 @@ gem 'devise', '~> 4.2'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'dotenv-rails', '~> 2.2'
 gem 'cancancan'
-
+gem "cocoon"
+gem 'jquery-ui-rails'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

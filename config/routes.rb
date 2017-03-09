@@ -1,15 +1,6 @@
 Rails.application.routes.draw do
-  get 'speakers/index'
 
-  get 'speakers/new'
-
-  get 'speakers/show'
-
-  get 'speakers/edit'
-
-  get 'speakers/delete'
-
-  get 'modules/index'
+  resources :companies
 
   root 'home#index'
   resources :menu

@@ -1,3 +1,13 @@
+<h1>edit confrenz</h1>
+<%= form_for @company do |f| %>
+  <%= render 'shared/errors', object: @company %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+
+
 <div class="container-fluid">
 
     <div class="row">
@@ -29,7 +39,7 @@
 
 
       <ul class="sortable">
-        <ul class="link-1">Agenda </ul>
+        <ul class="link-1"><%= render 'form_schedule', f: f %></ul>
         <ul class="link-2">Prelegenci</ul>
         <ul class="link-3">Uczestnicy</ul>
         <ul class="link-4">Umów spotkanie</ul>
@@ -60,4 +70,6 @@
 
     </div>
   </div>
+    <%= f.submit %>
 </div>
+<%end%>

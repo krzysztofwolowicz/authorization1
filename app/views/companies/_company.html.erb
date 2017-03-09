@@ -1,0 +1,14 @@
+<li>
+  <strong><%= company.title %></strong><br>
+  <% if company.schedules.any? %>
+    Schedules:
+    <ul>
+      <% company.schedules.each do |f| %>
+        <li>
+          <%= f.title %>
+          <strong><%= company.title %></strong> | <%= link_to 'Edit confrenz', edit_place_path(compny) %><br>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</li>

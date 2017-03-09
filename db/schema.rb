@@ -10,7 +10,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170303140828) do
+ActiveRecord::Schema.define(version: 20170309155420) do
+
+  create_table "abouts", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "company_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_abouts_on_company_id"
+  end
+
+  create_table "arranged_appointments", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "company_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_arranged_appointments_on_company_id"
+  end
+
+  create_table "city_guides", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "company_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_city_guides_on_company_id"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "company_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_comments_on_company_id"
+  end
+
+  create_table "companies", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "confrenzs", force: :cascade do |t|
     t.string   "titile"
@@ -24,11 +62,147 @@ ActiveRecord::Schema.define(version: 20170303140828) do
     t.index ["user_id"], name: "index_confrenzs_on_user_id"
   end
 
+  create_table "customs", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "company_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_customs_on_company_id"
+  end
+
+  create_table "exhibitors", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "company_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_exhibitors_on_company_id"
+  end
+
+  create_table "galleries", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "company_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_galleries_on_company_id"
+  end
+
+  create_table "information", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "company_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_information_on_company_id"
+  end
+
+  create_table "lecturers", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "company_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_lecturers_on_company_id"
+  end
+
+  create_table "location_plans", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "company_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_location_plans_on_company_id"
+  end
+
+  create_table "make_an_appointments", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "company_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_make_an_appointments_on_company_id"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "company_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_messages_on_company_id"
+  end
+
+  create_table "notifications", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "company_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_notifications_on_company_id"
+  end
+
+  create_table "participants", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "company_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_participants_on_company_id"
+  end
+
+  create_table "partners", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "company_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_partners_on_company_id"
+  end
+
+  create_table "presentations", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "company_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_presentations_on_company_id"
+  end
+
+  create_table "questionnaires", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "company_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_questionnaires_on_company_id"
+  end
+
+  create_table "schedules", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "company_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_schedules_on_company_id"
+  end
+
+  create_table "social_media", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "company_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_social_media_on_company_id"
+  end
+
+  create_table "soundings", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "company_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_soundings_on_company_id"
+  end
+
   create_table "speakers", force: :cascade do |t|
     t.string   "name"
     t.text     "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "sponsors", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "company_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_sponsors_on_company_id"
   end
 
   create_table "subjects", force: :cascade do |t|
