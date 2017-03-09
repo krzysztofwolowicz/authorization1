@@ -1,5 +1,4 @@
 
-
   <div class="table-responsive">
     <h5> <%= link_to(" << Powrót do listy", confrenzs_path, :class => 'back-link') %> </h5>
     <%= form_for @confrenz, html: { multipart: true }  do |f| %>
@@ -9,23 +8,23 @@
         <tr>
           <th>Tytuł konferencji</th>
           <th>Treść konferencji</th>
-          
+          <th>Data konferencji</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td><%= f.text_field(:titile)%></td>
           <td><%= f.text_field(:content)%></td>
-
+          <td><%= f.text_field(:start)%></td>
         </tr>
 
       </tbody>
+    </tbody>
 
-
-    </table>
-    <div class="form-buttons">
-      <%= f.submit("Potwierdź") %>
-    </div>
+  </table>
+  <div class="form-buttons">
+    <%= f.submit("Potwierdź") %>
   </div>
-
-  <% end %>
+</div>
+</div>
+<% end %>
