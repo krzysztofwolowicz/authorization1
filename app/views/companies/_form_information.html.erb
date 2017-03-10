@@ -1,0 +1,13 @@
+<div>
+  <p><strong>information:</strong></p>
+
+  <div id="schedules">
+    <%= f.fields_for :information do |information| %>
+      <%= render 'information_fields', f: information %>
+    <% end %>
+
+    <div class="links">
+      <%= link_to_add_association 'add information', f, :information %>
+    </div>
+  </div>
+</div>

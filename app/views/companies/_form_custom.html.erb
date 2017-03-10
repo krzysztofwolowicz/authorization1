@@ -1,0 +1,13 @@
+<div>
+  <p><strong>customs:</strong></p>
+
+  <div id="schedules">
+    <%= f.fields_for :customs do |custom| %>
+      <%= render 'custom_fields', f: custom %>
+    <% end %>
+
+    <div class="links">
+      <%= link_to_add_association 'add custom', f, :customs %>
+    </div>
+  </div>
+</div>

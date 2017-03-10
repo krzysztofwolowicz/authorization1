@@ -1,0 +1,13 @@
+<div>
+  <p><strong>city_guides:</strong></p>
+
+  <div id="schedules">
+    <%= f.fields_for :city_guides do |city_guide| %>
+      <%= render 'city_guide_fields', f: city_guide %>
+    <% end %>
+
+    <div class="links">
+      <%= link_to_add_association 'add city_guides', f, :city_guides %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div>
+  <p><strong>participants:</strong></p>
+
+  <div id="participants">
+    <%= f.fields_for :participants do |participant| %>
+      <%= render 'participant_fields', f: participant %>
+    <% end %>
+
+    <div class="links">
+      <%= link_to_add_association 'add participants', f, :participants %>
+    </div>
+  </div>
+</div>

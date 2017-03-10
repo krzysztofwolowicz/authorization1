@@ -17,6 +17,7 @@
           <li class="link1">Agenda </li>
           <li class="link2">Prelegenci</li>
           <li class="link3">Uczestnicy</li>
+          <li class="link21">Widaomości prywatne</li>
           <li class="link4">Umów spotkanie</li>
           <li class="link5">Umówione spotkanie</li>
           <li class="link6">Informacje: Kontakty, O wydarzeniu, Lokalizacja</li>
@@ -38,27 +39,28 @@
       </div>
 
 
-      <ul class="sortable">
+      <ul class="sortable" id="list">
         <ul class="link-1"><%= render 'form_schedule', f: f %></ul>
-        <ul class="link-2">Prelegenci</ul>
-        <ul class="link-3">Uczestnicy</ul>
-        <ul class="link-4">Umów spotkanie</ul>
-        <ul class="link-5">Umówione spotkanie</ul>
-        <ul class="link-6">Informacje: Kontakty, O wydarzeniu, Lokalizacja</ul>
-        <ul class="link-7">Sponsorzy</ul>
-        <ul class="link-8">Partnerzy</ul>
-        <ul class="link-9">Wystawcy</ul>
-        <ul class="link-10">Społeczności: Facebook, Twitter</ul>
-        <ul class="link-11">Ankieta</ul>
-        <ul class="link-12">Prezentacje</ul>
-        <ul class="link-13">Przewodnik po mieście</ul>
-        <ul class="link-14">Sondaże</ul>
-        <ul class="link-15">Komentarze</ul>
-        <ul class="link-16">Plan miejsca</ul>
-        <ul class="link-17">Galeria</ul>
-        <ul class="link-18">Powiadomienia</ul>
-        <ul class="link-19">O aplikacji</ul>
-        <ul class="link-20">Custom HTML</ul>
+        <ul class="link-2"><%= render 'form_lecturer', f: f %></ul>
+        <ul class="link-3"><%= render 'form_participant', f: f %></ul>
+        <ul class="link-21"><%= render 'form_message', f: f %></ul>
+        <ul class="link-4"><%= render 'form_make_an_appointment', f: f %></ul>
+        <ul class="link-5"><%= render 'form_arranged_appointment', f: f %></ul>
+        <ul class="link-6"><%= render 'form_information', f: f %></ul>
+        <ul class="link-7"><%= render 'form_sponsor', f: f %></ul>
+        <ul class="link-8"><%= render 'form_partner', f: f %></ul>
+        <ul class="link-9"><%= render 'form_exhibitor', f: f %></ul>
+        <ul class="link-10"><%= render 'form_social_medium', f: f %></ul>
+        <ul class="link-11"><%= render 'form_questionnaire', f: f %></ul>
+        <ul class="link-12"><%= render 'form_presentation', f: f %></ul>
+        <ul class="link-13"><%= render 'form_city_guide', f: f %></ul>
+        <ul class="link-14"><%= render 'form_soundingschedule', f: f %></ul>
+        <ul class="link-15"><%= render 'form_comment', f: f %></ul>
+        <ul class="link-16"><%= render 'form_location_plan', f: f %></ul>
+        <ul class="link-17"><%= render 'form_gallery', f: f %></ul>
+        <ul class="link-18"><%= render 'form_notification', f: f %></ul>
+        <ul class="link-19"><%= render 'form_about', f: f %></ul>
+        <ul class="link-20"><%= render 'form_custom', f: f %></ul>
       </ul>
       <!-- <div class="ui-widget">
         <label for="tags">Tags: </label>

@@ -1,0 +1,13 @@
+<div>
+  <p><strong>About:</strong></p>
+
+  <div id="schedules">
+    <%= f.fields_for :abouts do |about| %>
+      <%= render 'about_fields', f: about %>
+    <% end %>
+
+    <div class="links">
+      <%= link_to_add_association 'add about', f, :abouts %>
+    </div>
+  </div>
+</div>

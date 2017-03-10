@@ -1,0 +1,13 @@
+<div>
+  <p><strong>make_an_appointments:</strong></p>
+
+  <div id="schedules">
+    <%= f.fields_for :make_an_appointments do |make_an_appointment| %>
+      <%= render 'make_an_appointment_fields', f: make_an_appointment %>
+    <% end %>
+
+    <div class="links">
+      <%= link_to_add_association 'add make_an_appointments', f, :make_an_appointments %>
+    </div>
+  </div>
+</div>

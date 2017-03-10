@@ -1,0 +1,13 @@
+<div>
+  <p><strong>location_plans:</strong></p>
+
+  <div id="schedules">
+    <%= f.fields_for :location_plans do |location_plan| %>
+      <%= render 'location_plan_fields', f: location_plan %>
+    <% end %>
+
+    <div class="links">
+      <%= link_to_add_association 'add location_plan', f, :location_plans %>
+    </div>
+  </div>
+</div>

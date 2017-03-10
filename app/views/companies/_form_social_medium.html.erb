@@ -1,0 +1,14 @@
+<div>
+  <p><strong>social_media:</strong></p>
+
+  <div id="schedules">
+    <%= f.fields_for :social_media do |social_media| %>
+      <%= render 'social_medium_fields', f: social_media %>
+    <% end %>
+
+    <div class="links">
+      <%= link_to_add_association 'add social_media', f, :social_media %>
+    </div>
+  </div>
+
+</div>

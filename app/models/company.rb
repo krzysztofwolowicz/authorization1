@@ -1,24 +1,25 @@
 class Company < ApplicationRecord
-  has_many :schedules, dependent: :destroy, inverse_of: :company
-  has_many :abouts, dependent: :destroy, inverse_of: :company
-  has_many :arranged_appointments, dependent: :destroy, inverse_of: :company
-  has_many :city_guides, dependent: :destroy, inverse_of: :company
-  has_many :comments, dependent: :destroy, inverse_of: :company
-  has_many :companies, dependent: :destroy, inverse_of: :company
-  has_many :customs, dependent: :destroy, inverse_of: :company
-  has_many :exhibitors, dependent: :destroy, inverse_of: :company
-  has_many :galleries, dependent: :destroy, inverse_of: :company
-  has_many :information, dependent: :destroy, inverse_of: :company
-  has_many :lecturers, dependent: :destroy, inverse_of: :company
-  has_many :location_plans, dependent: :destroy, inverse_of: :company
-  has_many :make_an_appointments, dependent: :destroy, inverse_of: :company
-  has_many :messages, dependent: :destroy, inverse_of: :company
-  has_many :notifications, dependent: :destroy, inverse_of: :company
-  has_many :participants, dependent: :destroy, inverse_of: :company
-  has_many :questionnaires, dependent: :destroy, inverse_of: :company
-  has_many :social_media, dependent: :destroy, inverse_of: :company
-  has_many :soundings, dependent: :destroy, inverse_of: :company
-  has_many :sponsors, dependent: :destroy, inverse_of: :company
+  has_many :schedules, dependent: :destroy
+  has_many :abouts, dependent: :destroy
+  has_many :arranged_appointments, dependent: :destroy
+  has_many :city_guides, dependent: :destroy
+  has_many :comments, dependent: :destroy
+  has_many :customs, dependent: :destroy
+  has_many :exhibitors, dependent: :destroy
+  has_many :galleries, dependent: :destroy
+  has_many :information, dependent: :destroy
+  has_many :lecturers, dependent: :destroy
+  has_many :location_plans, dependent: :destroy
+  has_many :make_an_appointments, dependent: :destroy
+  has_many :messages, dependent: :destroy
+  has_many :notifications, dependent: :destroy
+  has_many :participants, dependent: :destroy
+  has_many :partners, dependent: :destroy
+  has_many :questionnaires, dependent: :destroy
+  has_many :social_media, dependent: :destroy
+  has_many :soundings, dependent: :destroy
+  has_many :sponsors, dependent: :destroy
+  has_many :presentations, dependent: :destroy
 
   accepts_nested_attributes_for :schedules, allow_destroy: true
   accepts_nested_attributes_for :abouts, allow_destroy: true
@@ -39,5 +40,7 @@ class Company < ApplicationRecord
   accepts_nested_attributes_for :soundings, allow_destroy: true
   accepts_nested_attributes_for :sponsors, allow_destroy: true
   accepts_nested_attributes_for :questionnaires, allow_destroy: true
+  accepts_nested_attributes_for :partners, allow_destroy: true
+  accepts_nested_attributes_for :presentations, allow_destroy: true
 
 end

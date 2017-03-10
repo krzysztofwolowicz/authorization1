@@ -3,46 +3,6 @@ $(document).on('turbolinks:load', function(){
     $( ".sortable" ).disableSelection();
   } );
 
-//   $( function() {
-//     var availableTags = [
-//       "ActionScript",
-//       "AppleScript",
-//       "Asp",
-//       "BASIC",
-//       "C",
-//       "C++",
-//       "Clojure",
-//       "COBOL",
-//       "ColdFusion",
-//       "Erlang",
-//       "Fortran",
-//       "Groovy",
-//       "Haskell",
-//       "Java",
-//       "JavaScript",
-//       "Lisp",
-//       "Perl",
-//       "PHP",
-//       "Python",
-//       "Ruby",
-//       "Scala",
-//       "Scheme"
-//     ];
-//     $( "#tags" ).autocomplete({
-//       source: availableTags
-//     });
-//   } );
-//
-//   $( function() {
-//     $( "#datepicker" ).datepicker();
-//   } );
-//
-//
-// $(document).ready(function(){
-//     $("#flip").click(function(){
-//         $("#panel").slideToggle("slow");
-//     });
-// });
 
 $(document).on('turbolinks:load', function(){
 
@@ -147,5 +107,11 @@ $(document).on('turbolinks:load', function(){
 $(document).on('turbolinks:load', function(){
     $(".link20").click(function(){
         $(".link-20").slideToggle("slow");
+    });
+});
+
+$(document).on('turbolinks:load', function(){
+    $(".link21").click(function(){
+        $(".link-21").slideToggle("slow");
     });
 });
