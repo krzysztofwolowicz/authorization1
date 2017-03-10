@@ -65,7 +65,8 @@ class CompaniesController < ApplicationController
   private
 
   def company_params
-    params.require(:company).permit(:title, schedules_attributes: [:id, :title, :_destroy],
+    params.require(:company).permit(:title,
+    schedules_attributes: [:id, :title, :_destroy],
     abouts_attributes: [:id, :title, :_destroy],
     arranged_appointments_attributes: [:id, :title, :_destroy],
     city_guides_attributes: [:id, :title, :_destroy],
@@ -83,7 +84,8 @@ class CompaniesController < ApplicationController
     presentations_attributes: [:id, :title, :_destroy],
     questionnaires_attributes: [:id, :title, :_destroy],
     social_media_attributes: [:id, :title, :_destroy],
-    sponsors: [:id, :title, :_destroy],
+    sponsors_attributes: [:id, :title, :_destroy],
+    lecturers_attributes: [:id, :title, :_destroy],
     soundings_attributes: [:id, :title, :_destroy])
   end
 end
