@@ -1,0 +1,19 @@
+.table-responsive
+  h5
+    = link_to(" << Powrót do listy", confrenzs_path, :class => 'back-link')
+  = form_for @confrenz, html: { multipart: true }  do |f|
+    table.table.table-striped
+      thead
+        tr
+          th
+            | Tytuł konferencji
+          th
+            | Treść konferencji
+      tbody
+        tr
+          td
+            = f.text_field(:titile)
+          td
+            = f.text_field(:content)
+    .form-buttons
+      = f.submit("Potwierdź")

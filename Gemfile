@@ -34,6 +34,9 @@ gem 'dotenv-rails', '~> 2.2'
 gem 'cancancan'
 gem "cocoon"
 gem 'jquery-ui-rails'
+gem 'haml', '~> 4.0.5'
+gem 'html2slim', '~> 0.2.0'
+gem 'slim'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

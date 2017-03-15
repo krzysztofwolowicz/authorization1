@@ -1,12 +1,24 @@
 $(document).on('turbolinks:load', function(){
-    $( ".sortable" ).sortable();
+    $( ".sortable" ).sortable({
+      update: function(event, ui){
+        console.log(ui.item.index()) //zwracanie obiektu po przeniesieniu
+        $(ui.item.context).find('[name*="order"]').val(ui.item.index()) //ten co przeciągnie ma order
+      }
+    });
     $( ".sortable" ).disableSelection();
   } );
 
 
+  $( function() {
+      $( ".sortable" ).sortable();
+      $( ".sortable" ).disableSelection();
+    } );
+
 $(document).on('turbolinks:load', function(){
 
     $(".link1").click(function(){
+
+      // alert($(this).attr('key-name'))
         $(".link-1").slideToggle("slow");
     });
 });

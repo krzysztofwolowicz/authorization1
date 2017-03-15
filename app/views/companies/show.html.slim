@@ -1,0 +1,16 @@
+.subjects.index
+  h1
+    =link_to'Powrót do menu', companies_path, :class => "btn btn-default"
+  .table-responsive
+    table.table
+      tr.header
+        th
+          |  Atrybuty konferencji: 
+          = @companies.title
+      - @companies.traits.each do |trait|
+        tr
+          td
+            = trait.key
+            
+          td  
+            = trait.title

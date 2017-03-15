@@ -1,46 +1,8 @@
 class Company < ApplicationRecord
-  has_many :schedules, dependent: :destroy
-  has_many :abouts, dependent: :destroy
-  has_many :arranged_appointments, dependent: :destroy
-  has_many :city_guides, dependent: :destroy
-  has_many :comments, dependent: :destroy
-  has_many :customs, dependent: :destroy
-  has_many :exhibitors, dependent: :destroy
-  has_many :galleries, dependent: :destroy
-  has_many :information, dependent: :destroy
-  has_many :lecturers, dependent: :destroy
-  has_many :location_plans, dependent: :destroy
-  has_many :make_an_appointments, dependent: :destroy
-  has_many :messages, dependent: :destroy
-  has_many :notifications, dependent: :destroy
-  has_many :participants, dependent: :destroy
-  has_many :partners, dependent: :destroy
-  has_many :questionnaires, dependent: :destroy
-  has_many :social_media, dependent: :destroy
-  has_many :soundings, dependent: :destroy
-  has_many :sponsors, dependent: :destroy
-  has_many :presentations, dependent: :destroy
+  has_many :traits, dependent: :destroy
 
-  accepts_nested_attributes_for :schedules, allow_destroy: true
-  accepts_nested_attributes_for :abouts, allow_destroy: true
-  accepts_nested_attributes_for :arranged_appointments, allow_destroy: true
-  accepts_nested_attributes_for :city_guides, allow_destroy: true
-  accepts_nested_attributes_for :comments, allow_destroy: true
-  accepts_nested_attributes_for :customs, allow_destroy: true
-  accepts_nested_attributes_for :exhibitors, allow_destroy: true
-  accepts_nested_attributes_for :galleries, allow_destroy: true
-  accepts_nested_attributes_for :information, allow_destroy: true
-  accepts_nested_attributes_for :lecturers, allow_destroy: true
-  accepts_nested_attributes_for :location_plans, allow_destroy: true
-  accepts_nested_attributes_for :make_an_appointments, allow_destroy: true
-  accepts_nested_attributes_for :messages, allow_destroy: true
-  accepts_nested_attributes_for :notifications, allow_destroy: true
-  accepts_nested_attributes_for :participants, allow_destroy: true
-  accepts_nested_attributes_for :social_media, allow_destroy: true
-  accepts_nested_attributes_for :soundings, allow_destroy: true
-  accepts_nested_attributes_for :sponsors, allow_destroy: true
-  accepts_nested_attributes_for :questionnaires, allow_destroy: true
-  accepts_nested_attributes_for :partners, allow_destroy: true
-  accepts_nested_attributes_for :presentations, allow_destroy: true
+
+  accepts_nested_attributes_for :traits, allow_destroy: true, reject_if: proc { |attributes| attributes['title'].blank? }
+
 
 end

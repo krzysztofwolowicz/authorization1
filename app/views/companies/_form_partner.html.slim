@@ -1,0 +1,5 @@
+div
+  #schedules
+    = render 'partner_fields', f: trait
+    .links
+      = link_to_add_association 'add', company, :traits, partial:'companies/partner_fields', :class => "linki"

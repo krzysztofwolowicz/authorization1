@@ -1,0 +1,49 @@
+doctype html
+html
+  head
+    title
+      | Authorization
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    script[src="https://code.jquery.com/jquery-1.12.4.js"]
+    script[src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"]
+    link[rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"]
+    link[rel="stylesheet" href="/resources/demos/style.css"]
+  link[rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"]
+  link[rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"]
+  script[src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"]
+  body
+    nav.navbar.navbar-inverse.navbar-fixed-top
+      .navbar-header
+        button.navbar-toggle.collapsed[type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"]
+          span.sr-only
+            | Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.navbar-brand[href="/"]
+          | Appchance
+      #navbar.collapse.navbar-collapse
+        ul.nav.navbar-nav
+          li
+            = link_to "Home", menu_index_path
+          li
+            - if user_signed_in?
+              li
+                = link_to "Logout", destroy_user_session_path, :method => :delete
+              li.active
+                = link_to "Hello " + current_user.email, edit_user_registration_path
+              li
+
+            - else
+              li
+                = link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path
+              li
+
+          li.notice
+            = notice
+          li.alert
+            = alert
+    .container
+      = yield

@@ -1,0 +1,26 @@
+li
+  strong
+    = company.title
+  br
+  - if company.schedules.any?
+    |  Schedules: 
+    ul
+      - company.schedules.each do |f|
+        li
+          = f.title
+          strong
+            = company.title
+          |  | 
+          = link_to 'Edit confrenz', edit_place_path(compny)
+          br
+  - if company.lecturers.any?
+    |  Schedules: 
+    ul
+      - company.lecturers.each do |f|
+        li
+          = f.title
+          strong
+            = company.title
+          |  | 
+          = link_to 'Edit confrenz', edit_place_path(compny)
+          br

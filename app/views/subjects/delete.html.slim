@@ -1,0 +1,12 @@
+= link_to(" << Powrót do listy", confrenz_index_path, :class => 'back-link')
+.subjects.delete
+  h2
+    | Usunięcie konferencji
+  h2
+    = form_for(@confrenz, :method => 'delete') do |f|
+      p
+        |  Jesteś pewien, że chcesz usunąć ten post? 
+      p.reference-name
+        = f.confrenz.title
+      .form-buttons
+        = f.submit("Usuń Post")

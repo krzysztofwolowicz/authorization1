@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :companies
+  resources :companies 
 
   root 'home#index'
   resources :menu

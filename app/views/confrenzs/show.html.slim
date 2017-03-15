@@ -1,0 +1,24 @@
+h5
+  = link_to(" << Powrót do listy", confrenzs_path, :class => 'back-link')
+.table
+  table.table.table-striped
+    thead
+      tr
+        th
+          | Data
+        th
+          | Tytuł
+        th
+          | Opis konferencji
+    tbody
+      tr
+        td
+          = @confrenz.start
+        td
+          = @confrenz.titile
+        td
+          = @confrenz.content
+  = render @confrenz.subjects
+  h3
+    |  Dodaj Agendę 
+  = render 'subjects/form'

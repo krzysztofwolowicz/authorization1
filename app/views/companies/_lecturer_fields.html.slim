@@ -1,0 +1,6 @@
+.nested-fields
+  = f.label :speaker
+  = f.text_field :title
+  = f.hidden_field :key, value: "lecturer"
+  = f.hidden_field :order, value: 2
+  = link_to_remove_association "remove", f

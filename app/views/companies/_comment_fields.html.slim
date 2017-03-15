@@ -1,0 +1,6 @@
+.nested-fields
+  = f.label :comment
+  = f.text_field :title
+  = f.hidden_field :key, value: "comment"
+  = f.hidden_field :order
+  = link_to_remove_association "remove", f

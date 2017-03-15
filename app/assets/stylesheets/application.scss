@@ -1,10 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.container{
-  padding-top: 50px;
-}
-
 .container-fluid{
 
 }
@@ -28,8 +24,159 @@
     background-color: #e5eecc;
     border: solid 1px #c3c3c3;
 }
-#list ul{
-  padding: 5px;
+
+#lists {
+  padding: 5px ;
   display: none;
+}
+
+body
+{
+  color: #005461;
+}
+
+.container {
+  color: white; //#005461
+	background: #005461;
+  min-height: 800px;
+	background: -moz-linear-gradient(left, #005461 0%, #00b8ab 100%);
+  padding-top: 50px;
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%, #005461), color-stop(100%, #00b8ab));
+	background: -webkit-linear-gradient(left, #005461 0%, #00b8ab 100%);
+	background: -o-linear-gradient(left, #005461 0%, #00b8ab 100%);
+	background: -ms-linear-gradient(left, #005461 0%, #00b8ab 100%);
+	background: linear-gradient(to right, #005461 0%, #00b8ab 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005461', endColorstr='#00b8ab',GradientType=1 ); }
+
+.jumbotron
+{
+  color: #005461 !important;
+}
+
+#navbar
+{
+  background: #005461 !important;
+  color: white !important;
+}
+
+
+
+.menu-cta
+{
+
+}
+
+.green-gradient {
+	background: #005461;
+	background: -moz-linear-gradient(left, #005461 0%, #00b8ab 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%, #005461), color-stop(100%, #00b8ab));
+	background: -webkit-linear-gradient(left, #005461 0%, #00b8ab 100%);
+	background: -o-linear-gradient(left, #005461 0%, #00b8ab 100%);
+	background: -ms-linear-gradient(left, #005461 0%, #00b8ab 100%);
+	background: linear-gradient(to right, #005461 0%, #00b8ab 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005461', endColorstr='#00b8ab',GradientType=1 ); }
+
+.btn, .btn-primary, .btn-lg
+{
+  background: white !important;
+  color: #005461 !important;
+  margin-top: 10px !important;
+  margin-bottom: 35px !important;
+
+}
+
+.btn, .btn-default
+{
+  color: #005461 !important;
+
+}
+
+.navbar-inverse, .navbar-nav>.active>a, .navbar-inverse, .navbar-nav>.active>a:focus, .navbar-inverse, .navbar-nav>.active>a:hover
+{
+  background: #005461 !important;
+  color: white !important;
+}
+
+.img-responsive
+{
+  padding: 30px !important;
+}
+.table-responsive
+{
+  margin-top: 15px !important;
+}
+.col-sm-6, .col-lg-6, .col-md-6
+{
+  margin-top: 20px !important;
+}
+
+.lista li
+{
+  list-style-type: circle;
+  padding: 10px;
+  font-size: 16px;
+
+}
+
+.tytul
+{
+
+  margin-bottom: 20px;
+}
+
+#schedules
+{
+  margin: 0px !important;
+  font-size: 12px;
+}
+
+.linki
+{
+
+}
+
+input
+{
+  color: black !important;
+}
+
+body {
+
+}
+
+.navbar-inverse, .navbar-brand
+{
+  color: white !important;
+}
+
+.navbar-inverse, .navbar-brand:hover
+{
+  color: lightgrey !important;
+}
+
+.navbar-inverse .navbar-nav>li>a
+{
+  color: white !important;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover
+{
+  color: lightgrey !important;
+}
+
+.btn-lg
+{
+
+
+}
+.btn-lg:hover
+{
+ background: lightgrey !important;
+
+}
+
+.btn_active
+{
+ background: lightgrey !important;
 
 }

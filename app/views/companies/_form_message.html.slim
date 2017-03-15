@@ -1,0 +1,5 @@
+div
+  #schedules
+    = render 'message_fields', f: trait
+    .links
+      = link_to_add_association 'add', company, :traits, partial:'companies/message_fields', :class => "linki"

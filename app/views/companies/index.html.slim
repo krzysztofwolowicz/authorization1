@@ -1,0 +1,21 @@
+.row.box-shadow
+  .col-sm-6.col-lg-6.col-md-6
+    h1
+      | Confrenz
+    h5
+      =link_to("Dodaj nową konferencję", new_company_path, :class => 'btn btn-default')
+    h5
+
+    .table-responsive
+      table.table
+        tr.header
+          th
+            | Tytuł konferencji
+        - @companies.each do |company|
+          tr
+            td
+              = company.title
+            td.actions
+              = link_to("Pokaż", company_path(company), :class => 'btn btn-default btn-xs')
+              = link_to("Edytuj", edit_company_path(company), :class => 'btn btn-default btn-xs')
+              = link_to("Usuń", company, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-default btn-xs')

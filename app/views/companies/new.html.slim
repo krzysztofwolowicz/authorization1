@@ -1,0 +1,161 @@
+h1
+  =link_to'Powrót do menu', companies_path, :class => "btn btn-default"
+= form_for @company do |f|
+  = render 'shared/errors', object: @company
+  .tytul
+    = f.label :title
+    = f.text_field :title
+  .container-fluid
+    .row
+      .col-xs-9
+        = f.fields_for :traits do |trait|
+          ul.lista.table.sortable
+
+            .dragendrop
+              li.link1.btn-lg
+                | Agenda 
+                = f.fields_for :traits do |trait|
+                  li#lists.link-1
+                    = render 'form_schedule', trait: trait, company: f
+            .dragendrop
+
+                li.link2.btn-lg
+                  | Prelegenci
+                  = f.fields_for :traits do |trait|
+                    li#lists.link-2
+                      = render 'form_lecturer', trait: trait, company: f
+            .dragendrop
+
+              li.link3.btn-lg
+                | Uczestnicy
+                = f.fields_for :traits do |trait|
+                  li#lists.link-3
+                    = render 'form_participant', trait: trait, company: f
+            .dragendrop
+
+              li.link21.btn-lg
+                | Widomości prywatne
+                = f.fields_for :traits do |trait|
+                  li#lists.link-21
+                    = render 'form_message', trait: trait, company: f
+            .dragendrop
+
+              li.link4.btn-lg
+                | Umów spotkanie
+                = f.fields_for :traits do |trait|
+                  li#lists.link-4
+                    = render 'form_make_an_appointment', trait: trait, company: f
+            .dragendrop
+
+              li.link5.btn-lg
+                | Umówione spotkanie
+                = f.fields_for :traits do |trait|
+                  li#lists.link-5
+                    = render 'form_arranged_appointment', trait: trait, company: f
+            .dragendrop
+
+              li.link6.btn-lg
+                | Informacje: Kontakty, O wydarzeniu, Lokalizacja
+                = f.fields_for :traits do |trait|
+                  li#lists.link-6
+                    = render 'form_information', trait: trait, company: f
+            .dragendrop
+
+              li.link7.btn-lg
+                | Sponsorzy
+                = f.fields_for :traits do |trait|
+                  li#lists.link-7
+                    = render 'form_sponsor', trait: trait, company: f
+            .dragendrop
+
+              li.link8.btn-lg
+                | Partnerzy
+                = f.fields_for :traits do |trait|
+                  li#lists.link-8
+                    = render 'form_partner', trait: trait, company: f
+            .dragendrop
+
+              li.link9.btn-lg
+                | Wystawcy
+                = f.fields_for :traits do |trait|
+                  li#lists.link-9
+                    = render 'form_exhibitor', trait: trait, company: f
+            .dragendrop
+
+              li.link10.btn-lg
+                | Społeczności: Facebook, Twitter
+                = f.fields_for :traits do |trait|
+                  li#lists.link-10
+                    = render 'form_social_medium', trait: trait, company: f
+            .dragendrop
+
+              li.link11.btn-lg
+                | Ankieta
+                = f.fields_for :traits do |trait|
+                  li#lists.link-11
+                    = render 'form_questionnaire', trait: trait, company: f
+            .dragendrop
+
+              li.link12.btn-lg
+                | Prezentacje
+                = f.fields_for :traits do |trait|
+                  li#lists.link-12
+                    = render 'form_presentation', trait: trait, company: f
+            .dragendrop
+
+              li.link13.btn-lg
+                | Przewodnik po mieście
+                = f.fields_for :traits do |trait|
+                  li#lists.link-13
+                    = render 'form_city_guide', trait: trait, company: f
+            .dragendrop
+
+              li.link14.btn-lg
+                | Sondaże
+                = f.fields_for :traits do |trait|
+                  li#lists.link-14
+                    = render 'form_soundings', trait: trait, company: f
+            .dragendrop
+
+              li.link15.btn-lg
+                | Komentarze
+                = f.fields_for :traits do |trait|
+                  li#lists.link-15
+                    = render 'form_comment', trait: trait, company: f
+            .dragendrop
+
+              li.link16.btn-lg
+                | Plan miejsca
+                = f.fields_for :traits do |trait|
+                  li#lists.link-16
+                    = render 'form_location_plan', trait: trait, company: f
+            .dragendrop
+
+              li.link17.btn-lg
+                | Galeria
+                = f.fields_for :traits do |trait|
+                  li#lists.link-17
+                    = render 'form_gallery', trait: trait, company: f
+            .dragendrop
+
+              li.link18.btn-lg
+                | Powiadomienia
+                = f.fields_for :traits do |trait|
+                  li#lists.link-18
+                    = render 'form_notification', trait: trait, company: f
+            .dragendrop
+
+              li.link19.btn-lg
+                | O aplikacji
+                = f.fields_for :traits do |trait|
+                  li#lists.link-19
+                    = render 'form_about', trait: trait, company: f
+            .dragendrop
+
+              li.link20.btn-lg
+                | Custom HTML
+                = f.fields_for :traits do |trait|
+                  li#lists.link-20
+                    = render 'form_custom', trait: trait, company: f
+          .col-xs-4
+            = f.submit 'Potwierdź', :class => "btn btn-default"

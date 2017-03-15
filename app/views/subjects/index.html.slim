@@ -1,0 +1,94 @@
+.container-fluid
+  .row
+    .col-md-2.sidebar
+      ul.nav.nav-sidebar
+        li.active
+          a[href="/confrenzs"]
+            | Agenda 
+            span.sr-only
+              | (current)
+        li
+          a[href="#"]
+            | Prelegenci
+        li
+          a[href="#"]
+            | Uczestnicy
+        li
+          a[href="#"]
+            | Umów spotkanie
+        li
+          a[href="#"]
+            | Umówione spotkanie
+        li
+          a[href="#"]
+            | Informacje: Kontakty, O wydarzeniu, Lokalizacja
+        li
+          a[href="#"]
+            | Sponsorzy
+        li
+          a[href="#"]
+            | Partnerzy
+        li
+          a[href="#"]
+            | Wystawcy
+        li
+          a[href="#"]
+            | Społeczności: Facebook, Twitter
+        li
+          a[href="#"]
+            | Ankieta
+        li
+          a[href="#"]
+            | Prezentacje
+        li
+          a[href="#"]
+            | Przewodnik po mieście
+        li
+          a[href="#"]
+            | Sondaże
+        li
+          a[href="#"]
+            | Komentarze
+        li
+          a[href="#"]
+            | Plan miejsca
+        li
+          a[href="#"]
+            | Galeria
+        li
+          a[href="#"]
+            | Powiadomienia
+        li
+          a[href="#"]
+            | O aplikacji
+        li
+          a[href="#"]
+            | Custom HTML
+    .table-responsive
+      h3
+        =link_to "Dodaj nową konferencję", new_confrenz_path
+      table.table.table-striped
+        thead
+          tr
+            th
+              | Data konferencji
+            th
+              | Tytuł
+            th
+              | Krótki opis
+        tbody
+          tr
+            td
+              = @confrenz.start
+            td
+              = @confrenz.titile
+            td
+              = @confrenz.content
+            td
+
+            td
+              = link_to("Pokaż", confrenz_path(@confrenz), :class => 'action show')
+            td
+              = link_to("Edytuj", edit_confrenz_path(@confrenz), :class => 'action edit')
+            td
+              = link_to("Usuń", @confrenz, method: :delete, data: { confirm: 'Are you sure?' })
